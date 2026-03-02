@@ -1,0 +1,564 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/** end reset css**/
+body {
+	max-width: 1140px;
+	margin:auto;
+	font-family: 'Work Sans' ;
+	font-size: 14px;
+}
+header {
+	display: flex;
+	justify-content: space-between;
+	margin: 50px 0
+}
+section {
+	margin: 50px 0
+}
+
+h1{
+	display: flex;
+	flex-direction: column;
+	font-family: 'Syne';
+	font-size: 22px;
+	font-weight: 800;
+	color: #B1663C
+}
+
+h1 > span {
+	font-family: 'Work Sans';
+	font-size:10px;
+	letter-spacing: 0.1em;
+;
+}
+
+h2{
+	display: flex;
+  	align-items: center;
+  	justify-content: center;
+	font-family: 'Syne';
+	font-weight: 700;
+	font-size: 30px;
+	color: #1D6154;
+}
+nav ul {
+	display: flex;
+	align-items: center;
+	list-style-type: none;
+
+}
+nav li {
+	padding: 0 10px;
+	font-size: 1.2em;
+}
+
+li:hover {
+	color: #B1663C;
+}
+#introduction {
+	display: flex;
+	align-items: center;
+}
+#introduction figure {
+	flex: 1
+}
+#introduction img {
+	display: block;
+	margin: auto;
+	width: 80%;
+}
+
+#introduction article {
+	flex: 1
+}
+#introduction h2 {
+	margin-bottom: 1em;
+}
+
+#introduction p {
+	margin-bottom: 0.5em;
+}
+#portfolio h2 {
+	text-align: center;
+	margin-bottom: 1em;
+}
+.gallery {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-column-gap: 20px;
+	grid-row-gap: 20px;
+}
+
+.gallery img {
+	width: 100%;
+
+}
+#contact {
+	width: 50%;
+margin: auto;
+}
+#contact > * {
+	text-align: center;
+
+}
+#contact h2{
+	margin-bottom: 20px;
+}
+#contact form {
+	text-align: left;
+	margin-top:30px;
+	display: flex;
+	flex-direction: column;
+}
+
+#contact input {
+	height: 50px;
+	font-size: 1.2em;
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+#contact label {
+	margin: 2em 0 1em 0;
+}
+#contact textarea {
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+input[type="submit"]{
+	font-family: 'Syne';
+	font-weight: 700;
+	color: white;
+	background-color: #1D6154;
+	margin : 2em auto ;
+	width: 180px;
+	text-align: center;
+	border-radius: 60px ;
+}
+
+footer nav ul {
+	display: flex;
+	justify-content: flex-end;
+	margin: 2em
+}
+
+/* Style Boutons Filtres */
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 50px;
+}
+
+.filter-btn {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    color: #1D6154;
+    background-color: white;
+    border: 1px solid #1D6154;
+    border-radius: 60px;
+    padding: 9px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    background-color: #1D6154;
+    color: white;
+}
+
+.filter-btn.active {
+    background-color: #1D6154;
+    color: white;
+}
+
+/* Page Login */
+#login {
+	width: 50%;
+	margin: auto;
+	text-align: center;
+}
+
+#login h2 {
+	margin-bottom: 40px;
+}
+
+#login form {
+	text-align: left;
+	margin-top: 30px;
+	display: flex;
+	flex-direction: column;
+}
+
+#login input {
+	height: 50px;
+	font-size: 1.2em;
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+#login label {
+	margin: 2em 0 1em 0;
+}
+
+#login textarea {
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+input[type="submit"] {
+	font-family: 'Syne';
+	font-weight: 700;
+	color: white;
+	background-color: #1D6154;
+	margin: 2em auto;
+	width: 180px;
+	text-align: center;
+	border-radius: 60px;
+}
+
+#login a {
+	text-align: center;
+	color: #3D3D3D;
+	text-decoration: underline;
+}
+
+/* Liens de navigation */
+nav ul {
+	display: flex;
+	align-items: center;
+	list-style-type: none;
+}
+
+nav li {
+	padding: 0 10px;
+	font-size: 1.2em;
+}
+
+nav a {
+	text-decoration: none;
+	color: #1D6154;
+}
+
+nav a:hover {
+	color: #B1663C;
+}
+
+/* Bandeau noir - login */
+.edit-banner {
+    background-color: #000;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.edit-banner p {
+    margin: 0;
+    font-family: 'Work Sans';
+}
+
+.edit-banner i {
+    margin-right: 10px;
+}
+
+body.edit-mode {
+    margin-top: 50px;
+}
+
+/* Bouton modifier */
+.modify-btn {
+    background: none;
+    border: none;
+    font-family: 'Work Sans';
+    font-size: 14px;
+    margin-left: 30px;
+    cursor: pointer;
+}
+.modify-btn i {
+    margin-right: 8px;
+}
+
+/* Mes projets */
+#portfolio h2 {
+    display: flex;
+    align-items: center;
+}
+
+/* Modal overlay*/
+.overlay{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: none;
+	z-index: 999;
+}
+
+.overlay--open{
+	display: block;
+}
+
+.modal{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -300%);
+	width: 500px;
+	padding: 40px;
+	background-color:white;
+	border-radius: 10px;
+	padding: 30px;
+	transition: transform 0.8s;
+	z-index: 1000;
+}
+
+.modal--open {
+	transform: translate(-50%, -50%);
+}
+
+.modal_close{
+	position: absolute;
+	top: 26px;
+	right: 30px; 
+	cursor: pointer;
+	
+}
+
+.modal_close svg{
+	width: 24px;
+	height: 24px;
+	
+
+}
+
+.modal_header{
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.modal_header_title{
+	color: #000;
+}
+
+.modal_header h2{
+	font-family: 'work sans';
+	font-size: 26px;
+	font-weight: 400;
+}
+
+.modal_gallery{
+	display: grid;
+	grid-template-columns: repeat(5,1fr);
+	gap: 15px;
+	padding: 0 30px;
+	max-height: 400px;
+	overflow-y: auto;
+	margin-bottom: 50px;
+}
+
+.modal_gallery_item{
+	position: relative;
+}
+
+.modal_gallery_item img{
+	width: 100%;
+	height: 100px;	
+	object-fit: cover;
+}
+
+
+.modal_body p{
+	font-size: 16px;
+}
+
+.modal_footer{
+	text-align: center;
+	border-top: 1px solid #B3B3B3;
+	padding-top: 40px;
+	padding-bottom: 20px;
+}
+
+.modal_footer_button{
+	font-family: 'Syne';
+	font-weight: 700;
+	color: white;
+	background-color: #1D6154;
+	width: 237px;
+	margin-bottom: 30px;
+	border-radius: 60px;
+	border: none;
+	padding: 10px 0;
+	font-size: 14px;
+	cursor: pointer;
+	
+}
+
+.modal_footer button:hover{
+	background-color:#0e4d3f;
+}
+
+
+.modal_gallery_item_delete {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    background: black;
+    color: white;
+    border: none;
+    width: 17px;
+    height: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 2px;
+}
+
+.modal_gallery_item_delete svg {
+    width: 100%;
+    height: 100%;
+}
+
+.modal_gallery_item_delete:hover {
+    background: #333;
+}
+
+/* FORMULAIRE _ Bouton retour */
+.modal_back {
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+}
+
+.modal_back svg {
+    width: 24px;
+    height: 24px;
+}
+
+.modal_view_form{
+	display: none;
+}
+
+/* Chargement photo*/
+.form_upload_zone {
+    background: #E8F1F6;
+    padding: 30px;
+    text-align: center;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.form_upload_zone label {
+    background: #CBD6DC;
+    color: #306685;
+    padding: 10px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.form_upload_zone p {
+    font-size: 10px;
+    margin: 0;
+}
+
+/* Formulaire */
+.form_group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.form_group label {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.form_group input,
+.form_group select {
+    border: none;
+    padding: 15px;
+    box-shadow: 0px 4px 14px rgba(0,0,0,0.09);
+    font-size: 14px;
+}
+
+/* Bouton valider */
+#submit_btn {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 60px;
+    font-size: 14px;
+    font-weight: bold;
+    background: #A7A7A7;
+    color: white;
+    cursor: not-allowed;
+}
+
+#submit_btn:not(:disabled) {
+    background: #1D6154;
+    cursor: pointer;
+}

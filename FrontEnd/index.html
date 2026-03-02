@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>Sophie Bluel - Architecte d'intérieur</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap" rel="stylesheet">
+	<meta name="description" content="">
+	<link rel="stylesheet" href="./assets/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<header>
+	<h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>
+	    <nav>
+        <ul>
+            <li>projets</li>
+            <li>contact</li>
+            <li><a href="login.html">login</a></li>
+            <li><img src="./assets/icons/instagram.png" alt="Instagram"></li>
+        </ul>
+    </nav>
+</header>
+<main>
+	<section id="introduction">
+		<figure>
+			<img src="./assets/images/sophie-bluel.png" alt="">
+		</figure>
+		<article>
+			<h2>Designer d'espace</h2>
+			<p>Je raconte votre histoire, je valorise vos idées. Je vous accompagne de la conception à la livraison finale du chantier.</p>
+			<p>Chaque projet sera étudié en commun, de façon à mettre en valeur les volumes, les matières et les couleurs dans le respect de l’esprit des lieux et le choix adapté des matériaux. Le suivi du chantier sera assuré dans le souci du détail, le respect du planning et du budget.</p>
+			<p>En cas de besoin, une équipe pluridisciplinaire peut-être constituée : architecte DPLG, décorateur(trice)</p>
+		</article>
+	</section>
+	<section id="portfolio">
+		<h2>Mes Projets</h2>
+
+	<div class="gallery">
+	</div>
+	</section>
+	<section id="contact">
+		<h2>Contact</h2>
+		<p>Vous avez un projet ? Discutons-en !</p>
+		<form action="#" method="post">
+			<label for="name">Nom</label>
+			<input type="text" name="name" id="name">
+			<label for="email">Email</label>
+			<input type="email" name="email" id="email">
+			<label for="message">Message</label>
+			<textarea name="message" id="message" cols="30" rows="10"></textarea>
+			<input type="submit" value="Envoyer">
+		</form>
+	</section>
+
+</main>
+
+<footer>
+	<nav>
+		<ul>
+			<li>Mentions Légales</li>
+		</ul>
+	</nav>
+</footer>
+
+<div class="overlay"></div>
+
+<div class="modal">
+
+    <div class="modal_close">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+        </svg>
+
+    </div>
+
+    <div class="modal_back">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+         <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+        </svg>
+
+    </div>
+
+    <div class="modal_view_gallery">
+        <div class="modal_header">
+            <h2 class="modal_header_title">Galerie photo</h2>
+        </div>
+        <div class="modal_body">
+            <div class="modal_gallery"></div>
+        </div>
+        <div class="modal_footer">
+            <button class="modal_footer_button" id="btn_add_photo">Ajouter une photo</button>
+        </div>
+    </div>
+
+    <div class="modal_view_form">
+        <div class="modal_header">
+            <h2 class="modal_header_title">Ajout photo</h2>
+        </div>
+        <div class="modal_body">
+
+            <form id="form_add_work">
+ 
+                <div class="form_upload_zone" id="upload_zone">
+                    <img id="image_preview" style="display: none; width: 100%; height: 169px; object-fit: contain;">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:60px;height:60px;color:#B9C5CC;">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 0 0 1.5-1.5V6a1.5 1.5 0 0 0-1.5-1.5H3.75A1.5 1.5 0 0 0 2.25 6v12a1.5 1.5 0 0 0 1.5 1.5Zm10.5-11.25h.008v.008h-.008V8.25Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                    </svg>
+                    <label for="image_input">+ Ajouter photo</label>
+                    <p>jpg, png : 4mo max</p>
+                </div>
+                <input type="file" id="image_input" accept="image/jpeg,image/png" style="display:none;">
+
+
+                <div class="form_group">
+                    <label for="work_title">Titre</label>
+                    <input type="text" id="work_title">
+                </div>
+
+                <div class="form_group">
+                    <label for="work_category">Catégorie</label>
+                    <select id="work_category">
+                        <option value=""></option>
+                    </select>
+                </div>
+
+                <hr>
+
+                <button type="submit" id="submit_btn" disabled>Valider</button>
+
+            </form>
+        </div>
+    </div>
+
+</div>
+
+<script src="assets/js/script.js"></script>
+
+</body>
+</html>
