@@ -214,11 +214,14 @@ function verifierFormulaire() {
     const titre = document.getElementById('work_title').value.trim() !== '';
     const categorie = document.getElementById('work_category').value !== '';
     const bouton = document.getElementById('submit_btn');
+    const formTouched = image || titre || categorie;
 
-    if (image && titre && categorie) {
-        bouton.disabled = false; 
+    bouton.disabled = !(image && titre && categorie);
+
+    if (formTouched && !(image && titre && categorie)) {
+        document.getElementById('form_error').style.display = 'block';
     } else {
-        bouton.disabled = true; 
+        document.getElementById('form_error').style.display = 'none';
     }
 }
 
@@ -251,11 +254,21 @@ function previsualiserImage() {
 async function envoyerFormulaire(e) {
     e.preventDefault();
 
+    const image = document.getElementById('image_input').files[0];
+    const titre = document.getElementById('work_title').value;
+    const categorie = document.getElementById('work_category').value;
+
+    if (!image || !titre || !categorie) {
+        document.getElementById('form_error').style.display = 'block';
+        return;
+    }
+    document.getElementById('form_error').style.display = 'none';
+
     const token = localStorage.getItem("authToken");
     const formData = new FormData();
-    formData.append('image', document.getElementById('image_input').files[0]);
-    formData.append('title', document.getElementById('work_title').value);
-    formData.append('category', document.getElementById('work_category').value);
+    formData.append('image', image);
+    formData.append('title', titre);
+    formData.append('category', categorie);
 
     const response = await fetch('http://localhost:5678/api/works', {
         method: 'POST', 

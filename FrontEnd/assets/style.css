@@ -546,6 +546,13 @@ body.edit-mode {
     font-size: 14px;
 }
 
+#form_error{
+	color: red;
+    text-align: center;
+    font-size: 14px;
+    display: none;
+}
+
 /* Bouton valider */
 #submit_btn {
     width: 100%;
