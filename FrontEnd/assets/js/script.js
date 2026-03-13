@@ -189,8 +189,21 @@ function displayWorksInModal() {
 function afficherFormulaire() {
     document.querySelector('.modal_view_gallery').style.display = 'none';
     document.querySelector('.modal_view_form').style.display = 'block';
-    document.querySelector('.modal_back').style.display = 'block'; 
-
+    document.querySelector('.modal_back').style.display = 'block';
+    
+    // Reset formulaire
+    document.getElementById('form_add_work').reset();
+    
+    // Reset prévisualisation
+    const preview = document.getElementById('image_preview');
+    const uploadZone = document.getElementById('upload_zone');
+    
+    preview.style.display = 'none';
+    preview.src = '';
+    uploadZone.querySelector('svg').style.display = 'block';
+    uploadZone.querySelector('label').style.display = 'block';
+    uploadZone.querySelector('p').style.display = 'block';
+    
     const select = document.getElementById('work_category');
     select.innerHTML = '<option value=""></option>';
     categories.forEach(category => {
